@@ -3,10 +3,10 @@
 	"version": "1.0.0",
 	"main": "index.js",
 	"scripts": {
-		"build": "tsc",
-		"start": "node dist/main/server.js",
 		"dev": "ts-node-dev --respawn --transpile-only src/main/server.ts",
-		"devAuth": "ts-node-dev --respawn --transpile-only src/auth/authServer.ts"
+		"devAuth": "ts-node-dev --respawn --transpile-only src/auth/authServer.ts",
+		"build": "tsc",
+		"start": "node dist/main/server.js"
 	},
 	"keywords": [],
 	"author": "",
