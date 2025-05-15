@@ -5,8 +5,18 @@ import Navbar from './Navbar';
 import Home from './page/Home';
 import Remember from "./page/Remember";
 import RemQuiz from "./page/RemQuiz";
+import { useEffect } from "react";
+import axios from "axios";
 
 const App = () => {
+
+	useEffect(()=>{
+		const pingServer=async()=>{
+			await axios.get("https://kanji-project.vercel.app/ping")
+		}
+		pingServer()
+	}, [])
+
 	return (
 		<>
 			<Navbar/>

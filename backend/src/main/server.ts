@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Request, Response } from "express";
 import cors from "cors";
 import route from "./routes";
 import dotenv from "dotenv";
@@ -12,6 +12,10 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 app.use("/kanji", route);
+
+app.get("/ping", (req:Request, res:Response)=>{
+	res.sendStatus(200)
+})
 
 app.listen(PORT, () => {
 	console.log("server is running");
