@@ -28,7 +28,7 @@ const SearchKanji = () => {
 		try {
 			setSubmit(true);
 			const response = await axios.post(
-				"http://localhost:3000/kanji/search",
+				"https://kanji-backend-4yfk.onrender.com/kanji/search",
 				{
 					query: input, // ✅ same as your fetch body
 				}

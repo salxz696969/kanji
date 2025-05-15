@@ -19,7 +19,7 @@ const Quiz = () => {
 	const submitAmountOfNumberToApi = async () => {
 		try {
 			const response = await axios.post(
-				"http://localhost:3000/kanji/quiz",
+				"https://kanji-backend-4yfk.onrender.com/kanji/quiz",
 				{
 					choiceNumber: input,
 				}

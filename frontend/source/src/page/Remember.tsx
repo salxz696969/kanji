@@ -18,7 +18,7 @@ const Remember = () => {
 		const getRememberedList = async () => {
 			try {
 				const response = await axios.get(
-					"http://localhost:3000/kanji/remember"
+					"https://kanji-backend-4yfk.onrender.com/kanji/remember"
 				);
 				setRemKanjiList(response.data); // Axios puts the actual data in `.data`
 			} catch (error) {
