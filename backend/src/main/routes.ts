@@ -40,7 +40,7 @@ route.post("/quiz", async (req: Request, res: Response) => {
 	}
 });
 
-route.put("/update", async (req: Request, res: Response) => {
+route.patch("/update", async (req: Request, res: Response) => {
 	try {
 		const idToUpdate = req.body.id;
 		if (!idToUpdate) {
@@ -63,7 +63,7 @@ route.get("/remember", async (req: Request, res: Response) => {
 	}
 });
 
-route.put("/notRemember", async(req:Request, res:Response)=>{
+route.patch("/notRemember", async(req:Request, res:Response)=>{
 	try {
 		const idToUpdate:string[]=req.body.id
 		if(!idToUpdate){
